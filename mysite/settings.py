@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'login_register',  # 数据库名，先前创建的
+        'USER': 'root',  # 用户名，可以自己创建用户
+        'PASSWORD': '',  # 密码
+        'HOST': '127.0.0.1',  # mysql服务所在的主机ip
+        'PORT': '3306',  # mysql服务端口
     }
 }
 
@@ -124,10 +128,10 @@ STATIC_URL = '/static/'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sina.com'
+EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'xxx@sina.com'
-EMAIL_HOST_PASSWORD = 'xxxxxx'
+EMAIL_HOST_USER = '348286169@qq.com'
+EMAIL_HOST_PASSWORD = 'ldxxpwdmxudgbhcd'
 
 # 注册有效期天数
 CONFIRM_DAYS = 7
